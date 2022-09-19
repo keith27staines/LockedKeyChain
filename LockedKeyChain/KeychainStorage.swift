@@ -9,30 +9,32 @@ import Foundation
 import KeychainAccess
 
 class KeychainStorage: KeyValueStorage {
-    private let keychain: Keychain
     
-    init(_ keychain: Keychain) {
+    private let keychain: Keychain
+    private let reporter: Reporter
+    
+    init(_ keychain: Keychain, reporter: Reporter) {
         self.keychain = keychain
+        self.reporter = reporter
     }
     
     func write(_ data: Data, forKey key: String) {
-        try? keychain.set(data, key: key)
+        do {
+            try keychain.set(data, key: key)
+            reporter.reportEvent(.writeKey(.success))
+        } catch {
+            reporter.reportEvent(.writeKey(.failure(error.localizedDescription)))
+        }
     }
     
     func read(_ key: String) -> Data? {
         do {
-            return try keychain.getData(key)
+            let data = try keychain.getData(key)
+            reporter.reportEvent(.readKey(.success))
+            return data
         } catch {
-            removeAll()
+            reporter.reportEvent(.readKey(.failure(error.localizedDescription)))
             return nil
         }
-    }
-    
-    func remove(_ key: String) {
-        try? keychain.remove(key)
-    }
-    
-    func removeAll() {
-        try? keychain.removeAll()
     }
 }

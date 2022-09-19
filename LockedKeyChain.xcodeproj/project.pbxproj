@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5350777828D89472008C98D2 /* ReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350777728D89472008C98D2 /* ReportItem.swift */; };
 		53D90BEF28D4BB5C0083A99E /* LockedKeyChainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90BEE28D4BB5C0083A99E /* LockedKeyChainApp.swift */; };
 		53D90BF128D4BB5C0083A99E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90BF028D4BB5C0083A99E /* ContentView.swift */; };
 		53D90BF328D4BB5D0083A99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D90BF228D4BB5D0083A99E /* Assets.xcassets */; };
@@ -16,6 +17,9 @@
 		53D90C1C28D4C46F0083A99E /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C1B28D4C46F0083A99E /* KeyValueStorage.swift */; };
 		53D90C1E28D4C5820083A99E /* KeychainStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C1D28D4C5820083A99E /* KeychainStorageFactory.swift */; };
 		53D90C2228D4C7630083A99E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C2128D4C7630083A99E /* KeychainStorage.swift */; };
+		53FAF54028D85C2500EFD3C5 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAF53F28D85C2500EFD3C5 /* Reporter.swift */; };
+		53FAF54328D8636800EFD3C5 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAF54228D8636800EFD3C5 /* ReportView.swift */; };
+		53FAF54528D87E0000EFD3C5 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAF54428D87E0000EFD3C5 /* Clock.swift */; };
 		84832AEE0D604112A50A89B0 /* Pods_LockedKeyChain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87C29FC751F035E996620EA /* Pods_LockedKeyChain.framework */; };
 		E1BF87896DD6DDD59D653874 /* Pods_LockedKeyChainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62BC60B6F8881DD327E9415 /* Pods_LockedKeyChainTests.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +37,8 @@
 /* Begin PBXFileReference section */
 		085ED0779389CE9EA499DE1F /* Pods-LockedKeyChain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChain.debug.xcconfig"; path = "Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain.debug.xcconfig"; sourceTree = "<group>"; };
 		3A8C0F73BFAC55B1DDE4696C /* Pods-LockedKeyChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChain.release.xcconfig"; path = "Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain.release.xcconfig"; sourceTree = "<group>"; };
-		5355A94028D4E66A008FF3AB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		5350777728D89472008C98D2 /* ReportItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportItem.swift; sourceTree = "<group>"; };
+		5355A94028D4E66A008FF3AB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		539A7E7028D4EE1C00FAF36F /* LockedKeyChain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LockedKeyChain.entitlements; sourceTree = "<group>"; };
 		539A7E7128D4EE4700FAF36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		53D90BEB28D4BB5C0083A99E /* LockedKeyChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockedKeyChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +51,9 @@
 		53D90C1B28D4C46F0083A99E /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		53D90C1D28D4C5820083A99E /* KeychainStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageFactory.swift; sourceTree = "<group>"; };
 		53D90C2128D4C7630083A99E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		53FAF53F28D85C2500EFD3C5 /* Reporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
+		53FAF54228D8636800EFD3C5 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		53FAF54428D87E0000EFD3C5 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		8CD4EB33242F76AD199860B7 /* Pods-LockedKeyChainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChainTests.release.xcconfig"; path = "Target Support Files/Pods-LockedKeyChainTests/Pods-LockedKeyChainTests.release.xcconfig"; sourceTree = "<group>"; };
 		A62BC60B6F8881DD327E9415 /* Pods_LockedKeyChainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LockedKeyChainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADF2B5B9BD2028A68A4861C /* Pods-LockedKeyChainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChainTests.debug.xcconfig"; path = "Target Support Files/Pods-LockedKeyChainTests/Pods-LockedKeyChainTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5350777628D8944C008C98D2 /* Reporter */ = {
+			isa = PBXGroup;
+			children = (
+				53FAF53F28D85C2500EFD3C5 /* Reporter.swift */,
+				5350777728D89472008C98D2 /* ReportItem.swift */,
+			);
+			path = Reporter;
+			sourceTree = "<group>";
+		};
 		53D90BE228D4BB5C0083A99E = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +117,14 @@
 				539A7E7128D4EE4700FAF36F /* Info.plist */,
 				539A7E7028D4EE1C00FAF36F /* LockedKeyChain.entitlements */,
 				53D90BEE28D4BB5C0083A99E /* LockedKeyChainApp.swift */,
-				53D90BF028D4BB5C0083A99E /* ContentView.swift */,
+				53FAF54128D8634D00EFD3C5 /* Views */,
 				53D90BF228D4BB5D0083A99E /* Assets.xcassets */,
 				53D90BF428D4BB5D0083A99E /* Preview Content */,
 				53D90C1B28D4C46F0083A99E /* KeyValueStorage.swift */,
 				53D90C1D28D4C5820083A99E /* KeychainStorageFactory.swift */,
 				53D90C2128D4C7630083A99E /* KeychainStorage.swift */,
+				5350777628D8944C008C98D2 /* Reporter */,
+				53FAF54428D87E0000EFD3C5 /* Clock.swift */,
 			);
 			path = LockedKeyChain;
 			sourceTree = "<group>";
@@ -124,6 +143,15 @@
 				53D90BFF28D4BB5D0083A99E /* LockedKeyChainTests.swift */,
 			);
 			path = LockedKeyChainTests;
+			sourceTree = "<group>";
+		};
+		53FAF54128D8634D00EFD3C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53D90BF028D4BB5C0083A99E /* ContentView.swift */,
+				53FAF54228D8636800EFD3C5 /* ReportView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7AC17AABFA3CC9A4F3F041E2 /* Pods */ = {
@@ -321,8 +349,12 @@
 			files = (
 				53D90C1E28D4C5820083A99E /* KeychainStorageFactory.swift in Sources */,
 				53D90BF128D4BB5C0083A99E /* ContentView.swift in Sources */,
+				53FAF54528D87E0000EFD3C5 /* Clock.swift in Sources */,
 				53D90C2228D4C7630083A99E /* KeychainStorage.swift in Sources */,
 				53D90BEF28D4BB5C0083A99E /* LockedKeyChainApp.swift in Sources */,
+				53FAF54328D8636800EFD3C5 /* ReportView.swift in Sources */,
+				53FAF54028D85C2500EFD3C5 /* Reporter.swift in Sources */,
+				5350777828D89472008C98D2 /* ReportItem.swift in Sources */,
 				53D90C1C28D4C46F0083A99E /* KeyValueStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
