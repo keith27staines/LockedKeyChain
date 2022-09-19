@@ -9,10 +9,12 @@ import Foundation
 
 import KeychainAccess
 
+let KEYCHAIN_TEST_KEY: String = "TEST"
+
 class KeychainStorageFactory {
-    private let localService = "AuthToolkitLocalKeychain"
-    private let sharedService = "AuthToolkitSharedKeychain"
-    private let sharedBundleIdentifier = "uk.co.bbc.idsso"
+    private let localService = "localKeyChain"
+    private let sharedService = "sharedKeychain"
+    private let sharedBundleIdentifier = "com.keith27staines.LockedKeyChain"
     
     var sharedStorage: KeyValueStorage? {
         if let teamIdentifier = teamID {
@@ -28,8 +30,6 @@ class KeychainStorageFactory {
         return nil
     }
     
-    private static let KEYCHAIN_TEST_KEY = "TEST"
-    
     private let teamID: String?
     private let bundleID: String?
     private let reporter: Reporter
@@ -42,16 +42,6 @@ class KeychainStorageFactory {
     
     private func build(service: String, group: String) -> KeyValueStorage? {
         let keychain = Keychain(service: service, accessGroup: group).accessibility(.afterFirstUnlock)
-        
-        do {
-            try keychain.set(Data(), key: KeychainStorageFactory.KEYCHAIN_TEST_KEY)
-            _ = try keychain.getData(KeychainStorageFactory.KEYCHAIN_TEST_KEY)
-            try keychain.remove(KeychainStorageFactory.KEYCHAIN_TEST_KEY)
-            reporter.reportEvent(.createKeychain(.success))
-        } catch {
-            reporter.reportEvent(.createKeychain(.failure(error.localizedDescription)))
-            return nil
-        }
         return KeychainStorage(keychain, reporter: reporter)
     }
     

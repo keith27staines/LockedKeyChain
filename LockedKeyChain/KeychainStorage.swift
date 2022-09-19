@@ -37,4 +37,13 @@ class KeychainStorage: KeyValueStorage {
             return nil
         }
     }
+    
+    func test() {
+        let data = UUID().uuidString.data(using: .utf8)!
+        write(data, forKey: KEYCHAIN_TEST_KEY)
+        let readData = read(KEYCHAIN_TEST_KEY)
+        if data != readData {
+            reporter.reportEvent(.readKey(.failure("Read data is not equal to written data")))
+        }
+    }
 }

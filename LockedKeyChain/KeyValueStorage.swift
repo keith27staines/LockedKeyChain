@@ -10,4 +10,6 @@ import Foundation
 protocol KeyValueStorage {
     func write(_ data: Data, forKey key: String)
     func read(_ key: String) -> Data?
+    
+    func test()
 }
