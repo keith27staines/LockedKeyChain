@@ -22,7 +22,7 @@ struct LockedKeyChainApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(reporter: reporter, reportView: reportView)
+            ContentView(reporter: reporter, reportView: reportView, keyValueStorage: KeychainStorageFactory(reporter: reporter).localStorage)
         }
     }
     

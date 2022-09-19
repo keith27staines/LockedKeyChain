@@ -10,12 +10,14 @@ import UserNotifications
 
 struct ContentView: View {
     
+    let keyValueStorage: KeyValueStorage
     let reporter: Reporter
     let reportView: ReportView
     
-    init(reporter: Reporter, reportView: ReportView) {
+    init(reporter: Reporter, reportView: ReportView, keyValueStorage: KeyValueStorage) {
         self.reporter = reporter
         self.reportView = reportView
+        self.keyValueStorage = keyValueStorage
     }
     
     var body: some View {
@@ -69,7 +71,7 @@ struct ContentView_Previews: PreviewProvider {
         let reporter: Reporter
         
         var body: some View {
-            ContentView(reporter: reporter, reportView: makeReportView())
+            ContentView(reporter: reporter, reportView: makeReportView(), keyValueStorage: FakeStore())
         }
         
         init() {
@@ -85,4 +87,21 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContainerView()
     }
+    
+    class FakeStore: KeyValueStorage {
+        
+        var storage = [String: Data]()
+
+        func write(_ data: Data, forKey key: String) {
+            storage[key] = data
+        }
+        
+        func read(_ key: String) -> Data? {
+            storage[key]
+        }
+        
+        func test() {}
+    }
 }
+
+

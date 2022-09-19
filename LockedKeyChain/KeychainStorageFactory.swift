@@ -13,34 +13,26 @@ let KEYCHAIN_TEST_KEY: String = "TEST"
 
 class KeychainStorageFactory {
     private let localService = "localKeyChain"
+    private let bundleId: String = ""
+    private let teamId: String = ""
     private let sharedService = "sharedKeychain"
-    private let sharedBundleIdentifier = "com.keith27staines.LockedKeyChain"
+    private let sharedBundleIdentifier = "com.keith27staines.LockedKeyChainShared"
     
     var sharedStorage: KeyValueStorage? {
-        if let teamIdentifier = teamID {
-            return build(service: sharedService, group: teamIdentifier + sharedBundleIdentifier)
-        }
-        return nil
+        build(service: sharedService, group: teamId + sharedBundleIdentifier)
     }
     
-    var localStorage: KeyValueStorage? {
-        if let teamIdentifier = teamID, let bundleIdentifier = bundleID {
-            return build(service: localService, group: teamIdentifier + bundleIdentifier)
-        }
-        return nil
+    var localStorage: KeyValueStorage {
+        build(service: localService, group: teamId + bundleId)
     }
-    
-    private let teamID: String?
-    private let bundleID: String?
+
     private let reporter: Reporter
     
-    init(_ teamID: String?, _ bundleID: String?, reporter: Reporter) {
-        self.teamID = teamID
-        self.bundleID = bundleID
+    init(reporter: Reporter) {
         self.reporter = reporter
     }
     
-    private func build(service: String, group: String) -> KeyValueStorage? {
+    private func build(service: String, group: String) -> KeyValueStorage {
         let keychain = Keychain(service: service, accessGroup: group).accessibility(.afterFirstUnlock)
         return KeychainStorage(keychain, reporter: reporter)
     }
