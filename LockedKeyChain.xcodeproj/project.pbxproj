@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,12 @@
 		53D90BF328D4BB5D0083A99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D90BF228D4BB5D0083A99E /* Assets.xcassets */; };
 		53D90BF628D4BB5D0083A99E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D90BF528D4BB5D0083A99E /* Preview Assets.xcassets */; };
 		53D90C0028D4BB5D0083A99E /* LockedKeyChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90BFF28D4BB5D0083A99E /* LockedKeyChainTests.swift */; };
-		53D90C0A28D4BB5D0083A99E /* LockedKeyChainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C0928D4BB5D0083A99E /* LockedKeyChainUITests.swift */; };
-		53D90C0C28D4BB5D0083A99E /* LockedKeyChainUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C0B28D4BB5D0083A99E /* LockedKeyChainUITestsLaunchTests.swift */; };
+		53D90C1A28D4C4190083A99E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 53D90C1928D4C4190083A99E /* KeychainAccess */; };
+		53D90C1C28D4C46F0083A99E /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C1B28D4C46F0083A99E /* KeyValueStorage.swift */; };
+		53D90C1E28D4C5820083A99E /* KeychainStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C1D28D4C5820083A99E /* KeychainStorageFactory.swift */; };
+		53D90C2228D4C7630083A99E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C2128D4C7630083A99E /* KeychainStorage.swift */; };
+		84832AEE0D604112A50A89B0 /* Pods_LockedKeyChain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87C29FC751F035E996620EA /* Pods_LockedKeyChain.framework */; };
+		E1BF87896DD6DDD59D653874 /* Pods_LockedKeyChainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62BC60B6F8881DD327E9415 /* Pods_LockedKeyChainTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,16 +28,14 @@
 			remoteGlobalIDString = 53D90BEA28D4BB5C0083A99E;
 			remoteInfo = LockedKeyChain;
 		};
-		53D90C0628D4BB5D0083A99E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53D90BE328D4BB5C0083A99E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53D90BEA28D4BB5C0083A99E;
-			remoteInfo = LockedKeyChain;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085ED0779389CE9EA499DE1F /* Pods-LockedKeyChain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChain.debug.xcconfig"; path = "Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain.debug.xcconfig"; sourceTree = "<group>"; };
+		3A8C0F73BFAC55B1DDE4696C /* Pods-LockedKeyChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChain.release.xcconfig"; path = "Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain.release.xcconfig"; sourceTree = "<group>"; };
+		5355A94028D4E66A008FF3AB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		539A7E7028D4EE1C00FAF36F /* LockedKeyChain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LockedKeyChain.entitlements; sourceTree = "<group>"; };
+		539A7E7128D4EE4700FAF36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		53D90BEB28D4BB5C0083A99E /* LockedKeyChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockedKeyChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D90BEE28D4BB5C0083A99E /* LockedKeyChainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedKeyChainApp.swift; sourceTree = "<group>"; };
 		53D90BF028D4BB5C0083A99E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,9 +43,13 @@
 		53D90BF528D4BB5D0083A99E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53D90BFB28D4BB5D0083A99E /* LockedKeyChainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LockedKeyChainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D90BFF28D4BB5D0083A99E /* LockedKeyChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedKeyChainTests.swift; sourceTree = "<group>"; };
-		53D90C0528D4BB5D0083A99E /* LockedKeyChainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LockedKeyChainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53D90C0928D4BB5D0083A99E /* LockedKeyChainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedKeyChainUITests.swift; sourceTree = "<group>"; };
-		53D90C0B28D4BB5D0083A99E /* LockedKeyChainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedKeyChainUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53D90C1B28D4C46F0083A99E /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
+		53D90C1D28D4C5820083A99E /* KeychainStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageFactory.swift; sourceTree = "<group>"; };
+		53D90C2128D4C7630083A99E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		8CD4EB33242F76AD199860B7 /* Pods-LockedKeyChainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChainTests.release.xcconfig"; path = "Target Support Files/Pods-LockedKeyChainTests/Pods-LockedKeyChainTests.release.xcconfig"; sourceTree = "<group>"; };
+		A62BC60B6F8881DD327E9415 /* Pods_LockedKeyChainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LockedKeyChainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADF2B5B9BD2028A68A4861C /* Pods-LockedKeyChainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockedKeyChainTests.debug.xcconfig"; path = "Target Support Files/Pods-LockedKeyChainTests/Pods-LockedKeyChainTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D87C29FC751F035E996620EA /* Pods_LockedKeyChain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LockedKeyChain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D90C1A28D4C4190083A99E /* KeychainAccess in Frameworks */,
+				84832AEE0D604112A50A89B0 /* Pods_LockedKeyChain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53D90C0228D4BB5D0083A99E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E1BF87896DD6DDD59D653874 /* Pods_LockedKeyChainTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +76,12 @@
 		53D90BE228D4BB5C0083A99E = {
 			isa = PBXGroup;
 			children = (
+				5355A94028D4E66A008FF3AB /* Podfile */,
 				53D90BED28D4BB5C0083A99E /* LockedKeyChain */,
 				53D90BFE28D4BB5D0083A99E /* LockedKeyChainTests */,
-				53D90C0828D4BB5D0083A99E /* LockedKeyChainUITests */,
 				53D90BEC28D4BB5C0083A99E /* Products */,
+				7AC17AABFA3CC9A4F3F041E2 /* Pods */,
+				810941F8ED6BD10E65D3B243 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +90,6 @@
 			children = (
 				53D90BEB28D4BB5C0083A99E /* LockedKeyChain.app */,
 				53D90BFB28D4BB5D0083A99E /* LockedKeyChainTests.xctest */,
-				53D90C0528D4BB5D0083A99E /* LockedKeyChainUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,10 +97,15 @@
 		53D90BED28D4BB5C0083A99E /* LockedKeyChain */ = {
 			isa = PBXGroup;
 			children = (
+				539A7E7128D4EE4700FAF36F /* Info.plist */,
+				539A7E7028D4EE1C00FAF36F /* LockedKeyChain.entitlements */,
 				53D90BEE28D4BB5C0083A99E /* LockedKeyChainApp.swift */,
 				53D90BF028D4BB5C0083A99E /* ContentView.swift */,
 				53D90BF228D4BB5D0083A99E /* Assets.xcassets */,
 				53D90BF428D4BB5D0083A99E /* Preview Content */,
+				53D90C1B28D4C46F0083A99E /* KeyValueStorage.swift */,
+				53D90C1D28D4C5820083A99E /* KeychainStorageFactory.swift */,
+				53D90C2128D4C7630083A99E /* KeychainStorage.swift */,
 			);
 			path = LockedKeyChain;
 			sourceTree = "<group>";
@@ -118,13 +126,24 @@
 			path = LockedKeyChainTests;
 			sourceTree = "<group>";
 		};
-		53D90C0828D4BB5D0083A99E /* LockedKeyChainUITests */ = {
+		7AC17AABFA3CC9A4F3F041E2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				53D90C0928D4BB5D0083A99E /* LockedKeyChainUITests.swift */,
-				53D90C0B28D4BB5D0083A99E /* LockedKeyChainUITestsLaunchTests.swift */,
+				085ED0779389CE9EA499DE1F /* Pods-LockedKeyChain.debug.xcconfig */,
+				3A8C0F73BFAC55B1DDE4696C /* Pods-LockedKeyChain.release.xcconfig */,
+				BADF2B5B9BD2028A68A4861C /* Pods-LockedKeyChainTests.debug.xcconfig */,
+				8CD4EB33242F76AD199860B7 /* Pods-LockedKeyChainTests.release.xcconfig */,
 			);
-			path = LockedKeyChainUITests;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		810941F8ED6BD10E65D3B243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D87C29FC751F035E996620EA /* Pods_LockedKeyChain.framework */,
+				A62BC60B6F8881DD327E9415 /* Pods_LockedKeyChainTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,15 +153,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53D90C0F28D4BB5D0083A99E /* Build configuration list for PBXNativeTarget "LockedKeyChain" */;
 			buildPhases = (
+				0082B2228F864DA92792519B /* [CP] Check Pods Manifest.lock */,
 				53D90BE728D4BB5C0083A99E /* Sources */,
 				53D90BE828D4BB5C0083A99E /* Frameworks */,
 				53D90BE928D4BB5C0083A99E /* Resources */,
+				D04123953F5DDC6E6FBBC4DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LockedKeyChain;
+			packageProductDependencies = (
+				53D90C1928D4C4190083A99E /* KeychainAccess */,
+			);
 			productName = LockedKeyChain;
 			productReference = 53D90BEB28D4BB5C0083A99E /* LockedKeyChain.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53D90C1228D4BB5D0083A99E /* Build configuration list for PBXNativeTarget "LockedKeyChainTests" */;
 			buildPhases = (
+				B1098EE625D515E3C94DDD8C /* [CP] Check Pods Manifest.lock */,
 				53D90BF728D4BB5D0083A99E /* Sources */,
 				53D90BF828D4BB5D0083A99E /* Frameworks */,
 				53D90BF928D4BB5D0083A99E /* Resources */,
@@ -164,24 +189,6 @@
 			productName = LockedKeyChainTests;
 			productReference = 53D90BFB28D4BB5D0083A99E /* LockedKeyChainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		53D90C0428D4BB5D0083A99E /* LockedKeyChainUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 53D90C1528D4BB5D0083A99E /* Build configuration list for PBXNativeTarget "LockedKeyChainUITests" */;
-			buildPhases = (
-				53D90C0128D4BB5D0083A99E /* Sources */,
-				53D90C0228D4BB5D0083A99E /* Frameworks */,
-				53D90C0328D4BB5D0083A99E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				53D90C0728D4BB5D0083A99E /* PBXTargetDependency */,
-			);
-			name = LockedKeyChainUITests;
-			productName = LockedKeyChainUITests;
-			productReference = 53D90C0528D4BB5D0083A99E /* LockedKeyChainUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,14 +207,10 @@
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = 53D90BEA28D4BB5C0083A99E;
 					};
-					53D90C0428D4BB5D0083A99E = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 53D90BEA28D4BB5C0083A99E;
-					};
 				};
 			};
 			buildConfigurationList = 53D90BE628D4BB5C0083A99E /* Build configuration list for PBXProject "LockedKeyChain" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -215,13 +218,15 @@
 				Base,
 			);
 			mainGroup = 53D90BE228D4BB5C0083A99E;
+			packageReferences = (
+				53D90C1828D4C4190083A99E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 53D90BEC28D4BB5C0083A99E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				53D90BEA28D4BB5C0083A99E /* LockedKeyChain */,
 				53D90BFA28D4BB5D0083A99E /* LockedKeyChainTests */,
-				53D90C0428D4BB5D0083A99E /* LockedKeyChainUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,22 +248,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53D90C0328D4BB5D0083A99E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0082B2228F864DA92792519B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LockedKeyChain-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		B1098EE625D515E3C94DDD8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LockedKeyChainTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D04123953F5DDC6E6FBBC4DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LockedKeyChain/Pods-LockedKeyChain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53D90BE728D4BB5C0083A99E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D90C1E28D4C5820083A99E /* KeychainStorageFactory.swift in Sources */,
 				53D90BF128D4BB5C0083A99E /* ContentView.swift in Sources */,
+				53D90C2228D4C7630083A99E /* KeychainStorage.swift in Sources */,
 				53D90BEF28D4BB5C0083A99E /* LockedKeyChainApp.swift in Sources */,
+				53D90C1C28D4C46F0083A99E /* KeyValueStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,15 +335,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53D90C0128D4BB5D0083A99E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53D90C0C28D4BB5D0083A99E /* LockedKeyChainUITestsLaunchTests.swift in Sources */,
-				53D90C0A28D4BB5D0083A99E /* LockedKeyChainUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +342,6 @@
 			isa = PBXTargetDependency;
 			target = 53D90BEA28D4BB5C0083A99E /* LockedKeyChain */;
 			targetProxy = 53D90BFC28D4BB5D0083A99E /* PBXContainerItemProxy */;
-		};
-		53D90C0728D4BB5D0083A99E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53D90BEA28D4BB5C0083A99E /* LockedKeyChain */;
-			targetProxy = 53D90C0628D4BB5D0083A99E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -411,26 +462,31 @@
 		};
 		53D90C1028D4BB5D0083A99E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 085ED0779389CE9EA499DE1F /* Pods-LockedKeyChain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LockedKeyChain/LockedKeyChain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LockedKeyChain/Preview Content\"";
-				DEVELOPMENT_TEAM = N5J83UZAWG;
+				DEVELOPMENT_TEAM = Q4783BNZ95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockedKeyChain/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedKeyChain;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keith.staines.LockedKeyChain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keith27staines.LockedKeyChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -440,26 +496,31 @@
 		};
 		53D90C1128D4BB5D0083A99E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A8C0F73BFAC55B1DDE4696C /* Pods-LockedKeyChain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LockedKeyChain/LockedKeyChain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LockedKeyChain/Preview Content\"";
-				DEVELOPMENT_TEAM = N5J83UZAWG;
+				DEVELOPMENT_TEAM = Q4783BNZ95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockedKeyChain/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedKeyChain;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keith.staines.LockedKeyChain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keith27staines.LockedKeyChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -469,12 +530,13 @@
 		};
 		53D90C1328D4BB5D0083A99E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BADF2B5B9BD2028A68A4861C /* Pods-LockedKeyChainTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5J83UZAWG;
+				DEVELOPMENT_TEAM = Q4783BNZ95;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -489,12 +551,13 @@
 		};
 		53D90C1428D4BB5D0083A99E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CD4EB33242F76AD199860B7 /* Pods-LockedKeyChainTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5J83UZAWG;
+				DEVELOPMENT_TEAM = Q4783BNZ95;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -504,42 +567,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LockedKeyChain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LockedKeyChain";
-			};
-			name = Release;
-		};
-		53D90C1628D4BB5D0083A99E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5J83UZAWG;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keith.staines.LockedKeyChainUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LockedKeyChain;
-			};
-			name = Debug;
-		};
-		53D90C1728D4BB5D0083A99E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5J83UZAWG;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keith.staines.LockedKeyChainUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LockedKeyChain;
 			};
 			name = Release;
 		};
@@ -573,16 +600,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53D90C1528D4BB5D0083A99E /* Build configuration list for PBXNativeTarget "LockedKeyChainUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53D90C1628D4BB5D0083A99E /* Debug */,
-				53D90C1728D4BB5D0083A99E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53D90C1828D4C4190083A99E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53D90C1928D4C4190083A99E /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53D90C1828D4C4190083A99E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53D90BE328D4BB5C0083A99E /* Project object */;
 }

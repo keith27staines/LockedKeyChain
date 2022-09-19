@@ -1,0 +1,6 @@
+framework module Pods_LockedKeyChainTests {
+  umbrella header "Pods-LockedKeyChainTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

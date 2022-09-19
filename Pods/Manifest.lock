@@ -1,0 +1,30 @@
+PODS:
+  - Airship (16.9.3):
+    - Airship/Automation (= 16.9.3)
+    - Airship/Basement (= 16.9.3)
+    - Airship/Core (= 16.9.3)
+    - Airship/ExtendedActions (= 16.9.3)
+    - Airship/MessageCenter (= 16.9.3)
+  - Airship/Automation (16.9.3):
+    - Airship/Core
+  - Airship/Basement (16.9.3)
+  - Airship/Core (16.9.3):
+    - Airship/Basement
+  - Airship/ExtendedActions (16.9.3):
+    - Airship/Core
+  - Airship/MessageCenter (16.9.3):
+    - Airship/Core
+
+DEPENDENCIES:
+  - Airship
+
+SPEC REPOS:
+  trunk:
+    - Airship
+
+SPEC CHECKSUMS:
+  Airship: e695e80794ce7036d94d2bd0e837c7a24efa5c65
+
+PODFILE CHECKSUM: c042a4560b99a3d336c43130ea3ff7dc8c03044c
+
+COCOAPODS: 1.11.3
